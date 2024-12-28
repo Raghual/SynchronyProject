@@ -1,7 +1,5 @@
 package com.synchrony.project.reservation.model;
 
-import com.synchrony.project.reservation.entity.RoomType;
-
 
 public class RoomDetailsDTO {
     private long roomId;
