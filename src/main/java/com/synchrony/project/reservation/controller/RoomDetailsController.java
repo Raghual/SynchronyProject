@@ -29,12 +29,12 @@ public class RoomDetailsController {
 
     @GetMapping("/getRooms")
     @Cacheable(value = "roomDetailsList")
-    public ResponseEntity<List<RoomDetails>> getAllRooms(){
-        return new ResponseEntity<>(roomDetailsService.getAllRooms(),HttpStatus.OK);
+    public List<RoomDetails> getAllRooms(){
+        return roomDetailsService.getAllRooms();
     }
 
     //Implemented Caching and retry mechanisms
-    @GetMapping("/getRoomDetails/{id}")
+    @GetMapping("/getRoomDetails/{roomId}")
     @Retryable(maxAttempts = 3, value = RedisConnectionFailureException.class, backoff = @Backoff(delay = 2000))
     @Cacheable(key="#roomId", value = "roomDetails")
     public Optional<RoomDetails> getRoomDetailsByRoomId(@PathVariable Long roomId){

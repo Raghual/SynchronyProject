@@ -1,5 +1,7 @@
 package com.synchrony.project.reservation.entity;
 
+import java.io.Serializable;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,7 +10,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "room_details")
-public class RoomDetails {
+public class RoomDetails  implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long roomId;

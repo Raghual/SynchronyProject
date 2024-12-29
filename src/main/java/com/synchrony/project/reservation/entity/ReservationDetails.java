@@ -1,5 +1,6 @@
 package com.synchrony.project.reservation.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,7 +9,7 @@ import lombok.Setter;
 
 import java.util.Date;
 
-
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "reservation_details")
 @Entity
 public class ReservationDetails {

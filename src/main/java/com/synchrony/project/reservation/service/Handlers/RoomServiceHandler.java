@@ -1,10 +1,8 @@
 package com.synchrony.project.reservation.service.Handlers;
 
-import com.synchrony.project.reservation.controller.RoomDetailsController;
 import com.synchrony.project.reservation.entity.RoomDetails;
 import com.synchrony.project.reservation.mapper.RoomDetailsMapper;
 import com.synchrony.project.reservation.model.RoomDetailsDTO;
-import com.synchrony.project.reservation.repository.ReservationDetailsRepository;
 import com.synchrony.project.reservation.repository.RoomDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
