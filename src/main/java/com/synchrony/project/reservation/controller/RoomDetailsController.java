@@ -1,6 +1,8 @@
 package com.synchrony.project.reservation.controller;
 
+import com.synchrony.project.reservation.Errors.ErrorResponse;
 import com.synchrony.project.reservation.entity.RoomDetails;
+import com.synchrony.project.reservation.exceptions.RoomNotFoundException;
 import com.synchrony.project.reservation.model.RoomDetailsDTO;
 import com.synchrony.project.reservation.service.bookingservices.RoomDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -37,7 +40,8 @@ public class RoomDetailsController {
     @GetMapping("/getRoomDetails/{roomId}")
     @Retryable(maxAttempts = 3, value = RedisConnectionFailureException.class, backoff = @Backoff(delay = 2000))
     @Cacheable(key="#roomId", value = "roomDetails")
-    public Optional<RoomDetails> getRoomDetailsByRoomId(@PathVariable Long roomId){
-        return roomDetailsService.getRoomDetailsByRoomId(roomId);
+    public RoomDetails getRoomDetailsByRoomId(@PathVariable Long roomId){
+        return roomDetailsService.getRoomDetailsByRoomId(roomId).orElseThrow(()->
+                new RoomNotFoundException("Room Not Found for the room id : "+roomId));
     }
 }

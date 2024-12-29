@@ -3,6 +3,7 @@ package com.synchrony.project.reservation.service.Handlers;
 import com.synchrony.project.reservation.entity.ProfileDetails;
 import com.synchrony.project.reservation.entity.ReservationDetails;
 import com.synchrony.project.reservation.entity.RoomDetails;
+import com.synchrony.project.reservation.exceptions.RoomNotFoundException;
 import com.synchrony.project.reservation.mapper.ProfileDetailsMapper;
 import com.synchrony.project.reservation.mapper.ReservationDetailsMapper;
 import com.synchrony.project.reservation.model.ProfileDetailsDTO;
@@ -73,7 +74,7 @@ public class ReservationServiceHandler {
     private RoomDetails getRoomDetails(ReservationDetails reservationDetails){
         Long roomId = reservationDetails.getRoomDetails().getRoomId();
         return roomDetailsService.getRoomDetailsByRoomId(roomId)
-                .orElseThrow(() -> new NoSuchElementException("RoomDetails not found for roomId: " + roomId));
+                .orElseThrow(() -> new RoomNotFoundException("RoomDetails not found for roomId: " + roomId));
     }
 
 
