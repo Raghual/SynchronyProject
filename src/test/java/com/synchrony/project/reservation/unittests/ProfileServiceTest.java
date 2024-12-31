@@ -1,14 +1,8 @@
-package com.synchrony.project.reservation.service;
+package com.synchrony.project.reservation.unittests;
 
 import com.synchrony.project.reservation.entity.ProfileDetails;
-import com.synchrony.project.reservation.entity.ReservationDetails;
-import com.synchrony.project.reservation.repository.ProfileDetailsRepository;
-import com.synchrony.project.reservation.repository.ReservationDetailsRepository;
-import com.synchrony.project.reservation.repository.RoomDetailsRepository;
-import com.synchrony.project.reservation.service.Handlers.ProfileServiceHandler;
-import com.synchrony.project.reservation.service.bookingservices.ProfileService;
-import com.synchrony.project.reservation.service.bookingservices.ReservationService;
-import com.synchrony.project.reservation.service.bookingservices.RoomDetailsService;
+import com.synchrony.project.reservation.unittests.Handlers.ProfileServiceHandler;
+import com.synchrony.project.reservation.unittests.bookingservices.ProfileService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

@@ -1,4 +1,4 @@
-package com.synchrony.project.reservation.service.Handlers;
+package com.synchrony.project.reservation.unittests.Handlers;
 
 import com.synchrony.project.reservation.entity.RoomDetails;
 import com.synchrony.project.reservation.mapper.RoomDetailsMapper;

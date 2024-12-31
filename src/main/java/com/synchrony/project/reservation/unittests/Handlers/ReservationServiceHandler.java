@@ -1,4 +1,4 @@
-package com.synchrony.project.reservation.service.Handlers;
+package com.synchrony.project.reservation.unittests.Handlers;
 
 import com.synchrony.project.reservation.entity.ProfileDetails;
 import com.synchrony.project.reservation.entity.ReservationDetails;
@@ -9,13 +9,11 @@ import com.synchrony.project.reservation.mapper.ReservationDetailsMapper;
 import com.synchrony.project.reservation.model.ProfileDetailsDTO;
 import com.synchrony.project.reservation.model.ReservationDetailsDTO;
 import com.synchrony.project.reservation.repository.ReservationDetailsRepository;
-import com.synchrony.project.reservation.service.bookingservices.ProfileService;
-import com.synchrony.project.reservation.service.bookingservices.RoomDetailsService;
+import com.synchrony.project.reservation.unittests.bookingservices.ProfileService;
+import com.synchrony.project.reservation.unittests.bookingservices.RoomDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import java.util.NoSuchElementException;
 import java.util.concurrent.*;
 
 

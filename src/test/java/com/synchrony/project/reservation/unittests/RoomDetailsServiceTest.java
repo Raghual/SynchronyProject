@@ -1,12 +1,11 @@
-package com.synchrony.project.reservation.service;
+package com.synchrony.project.reservation.unittests;
 
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.synchrony.project.reservation.entity.RoomDetails;
-import com.synchrony.project.reservation.repository.RoomDetailsRepository;
-import com.synchrony.project.reservation.service.Handlers.RoomServiceHandler;
-import com.synchrony.project.reservation.service.bookingservices.RoomDetailsService;
+import com.synchrony.project.reservation.unittests.Handlers.RoomServiceHandler;
+import com.synchrony.project.reservation.unittests.bookingservices.RoomDetailsService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
