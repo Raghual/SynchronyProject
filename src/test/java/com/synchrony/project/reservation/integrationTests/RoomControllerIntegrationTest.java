@@ -2,19 +2,14 @@ package com.synchrony.project.reservation.integrationTests;
 
 import com.synchrony.project.reservation.entity.RoomDetails;
 import com.synchrony.project.reservation.model.RoomDetailsDTO;
-import com.synchrony.project.reservation.unittests.bookingservices.RoomDetailsService;
+import com.synchrony.project.reservation.service.bookingservices.RoomDetailsService;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cache.CacheManager;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
 
 import java.util.List;
 

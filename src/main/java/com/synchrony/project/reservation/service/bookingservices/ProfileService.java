@@ -1,8 +1,8 @@
-package com.synchrony.project.reservation.unittests.bookingservices;
+package com.synchrony.project.reservation.service.bookingservices;
 
 import com.synchrony.project.reservation.entity.ProfileDetails;
 import com.synchrony.project.reservation.model.ProfileDetailsDTO;
-import com.synchrony.project.reservation.unittests.Handlers.ProfileServiceHandler;
+import com.synchrony.project.reservation.service.Handlers.ProfileServiceHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

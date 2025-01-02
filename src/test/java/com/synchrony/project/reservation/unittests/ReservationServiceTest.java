@@ -1,8 +1,8 @@
 package com.synchrony.project.reservation.unittests;
 
 import com.synchrony.project.reservation.entity.ReservationDetails;
-import com.synchrony.project.reservation.unittests.Handlers.ReservationServiceHandler;
-import com.synchrony.project.reservation.unittests.bookingservices.ReservationService;
+import com.synchrony.project.reservation.service.Handlers.ReservationServiceHandler;
+import com.synchrony.project.reservation.service.bookingservices.ReservationService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

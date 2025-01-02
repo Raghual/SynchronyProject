@@ -3,7 +3,7 @@ package com.synchrony.project.reservation.controller;
 import com.synchrony.project.reservation.entity.RoomDetails;
 import com.synchrony.project.reservation.exceptions.RoomNotFoundException;
 import com.synchrony.project.reservation.model.RoomDetailsDTO;
-import com.synchrony.project.reservation.unittests.bookingservices.RoomDetailsService;
+import com.synchrony.project.reservation.service.bookingservices.RoomDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;

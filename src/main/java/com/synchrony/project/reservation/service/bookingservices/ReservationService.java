@@ -1,9 +1,9 @@
-package com.synchrony.project.reservation.unittests.bookingservices;
+package com.synchrony.project.reservation.service.bookingservices;
 
 import com.synchrony.project.reservation.entity.ReservationDetails;
 import com.synchrony.project.reservation.model.ReservationDetailsDTO;
 import com.synchrony.project.reservation.repository.ReservationDetailsRepository;
-import com.synchrony.project.reservation.unittests.Handlers.ReservationServiceHandler;
+import com.synchrony.project.reservation.service.Handlers.ReservationServiceHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
